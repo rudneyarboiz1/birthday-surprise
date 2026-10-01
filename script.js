@@ -4,6 +4,9 @@ const openButton =
 const birthdaySong =
     document.getElementById("birthdaySong");
 
+const welcomePage =
+    document.querySelector(".welcome-page");
+
 const revealPage =
     document.getElementById("revealPage");
 
@@ -31,6 +34,10 @@ openButton.addEventListener("click", () => {
 
     openButton.disabled = true;
 
+    /* HIDE THE FIRST PAGE */
+    welcomePage.classList.add("hide");
+
+    /* SHOW SURPRISE */
     revealPage.classList.add("show");
 
     birthdaySong.currentTime = 0;
