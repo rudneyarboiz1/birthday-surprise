@@ -1,0 +1,1067 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #f5f5f5;
+
+    color: #222;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    padding: 14px 32px;
+
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    background: #222;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    background: #333;
+}
+
+
+button:active {
+
+    transform: scale(0.96);
+}
+
+
+button:disabled {
+
+    cursor: default;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   FIRST PAGE
+========================= */
+
+.welcome-page {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: #f5f5f5;
+
+    z-index: 10;
+}
+
+
+.content {
+
+    max-width: 500px;
+
+    animation: fadeIn 1s ease;
+}
+
+
+.content h1 {
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+
+.message {
+
+    font-size: 16px;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   SURPRISE PAGE
+========================= */
+
+.reveal-page {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #2d0d2b,
+            #090909 70%
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.08);
+
+    transition: 0.8s ease;
+
+    z-index: 20;
+
+    overflow: hidden;
+}
+
+
+.reveal-page.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+.reveal-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    animation: surpriseContent 1s ease;
+
+}
+
+
+.reveal-small {
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.6;
+
+    margin-bottom: 20px;
+}
+
+
+.reveal-content h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(60px, 12vw, 120px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.reveal-message {
+
+    font-size: 24px;
+
+    margin-bottom: 30px;
+}
+
+
+.music-status {
+
+    font-size: 13px;
+
+    opacity: 0.55;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FUNNY VIDEOS
+========================= */
+
+.funny-video {
+
+    position: absolute;
+
+    width: 170px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 4px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.5);
+
+    z-index: 2;
+
+    opacity: 0.9;
+
+    animation: funnyFloat 3s ease-in-out infinite;
+}
+
+
+.funny-left {
+
+    left: 35px;
+
+    bottom: 35px;
+
+    transform: rotate(-8deg);
+}
+
+
+.funny-right {
+
+    right: 35px;
+
+    top: 35px;
+
+    transform: rotate(8deg);
+
+    animation-delay: 1s;
+}
+
+
+@keyframes funnyFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(-4deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+    }
+
+}
+
+
+/* =========================
+   BIRTHDAY PAGE
+========================= */
+
+.surprise-page {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #40153f,
+            #160916 65%
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.05);
+
+    transition: 1s ease;
+
+    z-index: 30;
+
+    overflow-y: auto;
+}
+
+
+.surprise-page.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+.surprise-content {
+
+    max-width: 700px;
+
+    width: 100%;
+}
+
+
+.photo-frame {
+
+    width: 180px;
+
+    height: 180px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    padding: 6px;
+
+    background: white;
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,0.15);
+
+    animation: photoAppear 1.5s ease;
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.birthday-small {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+
+    margin-bottom: 20px;
+}
+
+
+.surprise-content h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(45px, 9vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.birthday-message {
+
+    font-size: 16px;
+
+    opacity: 0.75;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   MY WISH PAGE
+========================= */
+
+.wish-page {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f7e4ec
+        );
+
+    color: #35232b;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(40px);
+
+    transition: 1s ease;
+
+    z-index: 40;
+
+    overflow-y: auto;
+
+    padding: 70px 25px;
+}
+
+
+.wish-page.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.wish-content {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.wish-small {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #a06b80;
+
+    margin-bottom: 15px;
+}
+
+
+.wish-content h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(50px, 9vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.wish-intro {
+
+    max-width: 600px;
+
+    margin: 0 auto 50px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #765965;
+}
+
+
+/* =========================
+   WISH PHOTOS
+========================= */
+
+.wish-photo-card {
+
+    background: white;
+
+    padding: 12px 12px 22px;
+
+    margin: 45px auto;
+
+    max-width: 500px;
+
+    box-shadow:
+        0 15px 40px rgba(80,40,60,0.13);
+
+    transform: rotate(-1deg);
+
+    transition: 0.3s ease;
+}
+
+
+.wish-photo-card:nth-of-type(2n) {
+
+    transform: rotate(1.2deg);
+}
+
+
+.wish-photo-card:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(0deg);
+}
+
+
+.wish-photo-card img {
+
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 18px;
+}
+
+
+.wish-photo-card p {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 18px;
+
+    color: #604653;
+}
+
+
+/* =========================
+   WISH TEXT
+========================= */
+
+.wish-text {
+
+    max-width: 600px;
+
+    margin: 45px auto;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: #654b57;
+}
+
+
+.wish-ending {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 32px;
+
+    margin: 55px 0 35px;
+
+    color: #4a2938;
+}
+
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-page {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #541c4e,
+            #170918 75%
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.05);
+
+    transition: 1s ease;
+
+    z-index: 50;
+
+    overflow-y: auto;
+}
+
+
+.final-page.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+.final-content {
+
+    max-width: 650px;
+
+    animation: finalAppear 1.5s ease;
+}
+
+
+.final-heart {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+
+.final-small {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.55;
+
+    margin-bottom: 20px;
+}
+
+
+.final-content h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(48px, 9vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 35px;
+}
+
+
+.final-message {
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    opacity: 0.8;
+}
+
+
+.final-hearts {
+
+    margin-top: 40px;
+
+    font-size: 22px;
+
+    letter-spacing: 8px;
+}
+
+
+.final-date {
+
+    margin-top: 35px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes surpriseContent {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.5);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes heartBeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+
+    .content h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .message {
+
+        font-size: 14px;
+
+    }
+
+
+    .reveal-small {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .reveal-content h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .reveal-message {
+
+        font-size: 19px;
+
+    }
+
+
+    /* MOBILE FUNNY VIDEOS */
+
+    .funny-video {
+
+        width: 95px;
+
+        height: 95px;
+
+        border-radius: 14px;
+
+        border-width: 3px;
+
+    }
+
+
+    .funny-left {
+
+        left: 12px;
+
+        bottom: 20px;
+
+    }
+
+
+    .funny-right {
+
+        right: 12px;
+
+        top: 20px;
+
+    }
+
+
+    .photo-frame {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+
+    .birthday-small {
+
+        font-size: 11px;
+
+    }
+
+
+    .surprise-content h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .birthday-message {
+
+        font-size: 14px;
+
+    }
+
+
+    .wish-page {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .wish-content h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .wish-intro {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .wish-photo-card {
+
+        margin: 35px auto;
+
+    }
+
+
+    .wish-photo-card img {
+
+        height: 330px;
+
+    }
+
+
+    .wish-photo-card p {
+
+        font-size: 16px;
+
+    }
+
+
+    .wish-text {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+    }
+
+
+    .wish-ending {
+
+        font-size: 27px;
+
+    }
+
+
+    .final-content h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .final-message {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+    }
+
+
+    .final-hearts {
+
+        font-size: 18px;
+
+        letter-spacing: 4px;
+
+    }
+
+}
