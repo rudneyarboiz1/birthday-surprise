@@ -2,38 +2,23 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday ❤️</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-    <!-- =========================
+    <!-- ==============================
          FIRST PAGE
-    ========================== -->
+    =============================== -->
 
     <main class="welcome-page">
 
         <div class="content">
 
-            <h1>
-                Mag Ready kase may Jumpscare😱!!
-            </h1>
+            <h1>Mag Ready kase may Jumpscare😱!!</h1>
 
             <p class="message">
                 Click the button.
@@ -48,18 +33,44 @@
     </main>
 
 
+    <!-- ==============================
+         GIFT PAGE
+    =============================== -->
 
-    <!-- =========================
-         SURPRISE PAGE
-    ========================== -->
+    <div id="giftPage" class="gift-page">
 
-    <div
-        id="revealPage"
-        class="reveal-page"
-    >
+        <div class="gift-content">
+
+            <p class="gift-small">
+                WAIT...
+            </p>
+
+            <div id="giftBox" class="gift-box">
+
+                <div class="gift-lid">
+                    <div class="gift-ribbon-horizontal"></div>
+                </div>
+
+                <div class="gift-body">
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+
+            </div>
+
+            <p id="giftText" class="gift-text">
+                I have something for you...
+            </p>
+
+        </div>
+
+    </div>
 
 
-        <!-- LEFT FUNNY VIDEO -->
+    <!-- ==============================
+         SURPRISE REVEAL
+    =============================== -->
+
+    <div id="revealPage" class="reveal-page">
 
         <video
             class="funny-video funny-left"
@@ -67,11 +78,8 @@
             autoplay
             muted
             loop
-            playsinline
-        ></video>
-
-
-        <!-- RIGHT FUNNY VIDEO -->
+            playsinline>
+        </video>
 
         <video
             class="funny-video funny-right"
@@ -79,9 +87,19 @@
             autoplay
             muted
             loop
-            playsinline
-        ></video>
+            playsinline>
+        </video>
 
+        <div class="confetti">
+            <span>🎉</span>
+            <span>✨</span>
+            <span>🎊</span>
+            <span>❤️</span>
+            <span>✨</span>
+            <span>🎉</span>
+            <span>❤️</span>
+            <span>🎊</span>
+        </div>
 
         <div class="reveal-content">
 
@@ -106,45 +124,33 @@
     </div>
 
 
-
-    <!-- =========================
+    <!-- ==============================
          BIRTHDAY PAGE
-    ========================== -->
+    =============================== -->
 
-    <div
-        id="surprisePage"
-        class="surprise-page"
-    >
+    <div id="surprisePage" class="surprise-page">
 
         <div class="surprise-content">
 
-
             <div class="photo-frame">
-
-                <!-- CHANGE THIS PHOTO -->
 
                 <img
                     src="images/Erica maganda.jpg"
-                    alt="Birthday Photo"
-                >
+                    alt="Birthday Photo">
 
             </div>
-
 
             <p class="birthday-small">
                 Today is your special day baby...
             </p>
 
-
             <h2>
                 Happy 22nd Birthday Love! 🎂❤️
             </h2>
 
-
             <p class="birthday-message">
                 Someone very special was born today.
             </p>
-
 
             <button id="continueButton">
                 Continue ❤️
@@ -155,258 +161,281 @@
     </div>
 
 
+    <!-- ==============================
+         FINAL SCRAPBOOK PAGE
+    =============================== -->
 
-    <!-- =========================
-         MY WISH FOR YOU
-    ========================== -->
+    <div id="finalPage" class="final-page">
 
-    <div
-        id="wishPage"
-        class="wish-page"
-    >
+        <div class="birthday-card">
 
-        <div class="wish-content">
+            <!-- BUNTING -->
 
+            <div class="bunting">
 
-            <p class="wish-small">
-                A MESSAGE FROM ME TO YOU
-            </p>
+                <div class="flag yellow"></div>
+                <div class="flag blue"></div>
+                <div class="flag red"></div>
+                <div class="flag green"></div>
+                <div class="flag pink"></div>
+                <div class="flag orange"></div>
+                <div class="flag purple"></div>
 
+            </div>
 
-            <h2>
-                My Wish for You ❤️
-            </h2>
-
-
-            <p class="wish-intro">
-
-                On your 22nd birthday, my biggest wish
-                is for you to always be happy, loved,
-                and surrounded by people who truly care
-                about you.
-
-            </p>
+            <div class="bunting-string"></div>
 
 
+            <!-- BALLOONS -->
 
-            <!-- =========================
-                 PHOTO 1
-            ========================== -->
+            <div class="balloons">
 
-            <div class="wish-photo-card">
+                <div class="balloon red-balloon">
+                    <span></span>
+                </div>
 
-                <!-- CHANGE PHOTO 1 -->
+                <div class="balloon orange-balloon">
+                    <span></span>
+                </div>
+
+                <div class="balloon yellow-balloon">
+                    <span></span>
+                </div>
+
+                <div class="balloon green-balloon">
+                    <span></span>
+                </div>
+
+                <div class="balloon blue-balloon">
+                    <span></span>
+                </div>
+
+                <div class="balloon purple-balloon">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <!-- 22 -->
+
+            <div class="big-number">
+                22
+            </div>
+
+
+            <!-- STARS -->
+
+            <div class="star star-one">
+                ★
+            </div>
+
+            <div class="star star-two">
+                ★
+            </div>
+
+            <div class="star star-three">
+                ★
+            </div>
+
+
+            <!-- PHOTO -->
+
+            <div class="final-photo">
+
+                <div class="photo-tape"></div>
 
                 <img
-                    src="images/haha.jpg"
-                    alt="Our Photo"
-                >
+                    src="images/love.jpg"
+                    alt="Birthday Girl">
+
+            </div>
+
+
+            <!-- DECORATIONS -->
+
+            <div class="cat-decoration">
+
+                🐱
+
+                <div class="cat-hat">
+                    🎉
+                </div>
+
+            </div>
+
+            <div class="cake-decoration">
+                🎂
+            </div>
+
+
+            <!-- HAPPY BIRTHDAY -->
+
+            <div class="birthday-title">
+
+                <span>H</span>
+                <span>A</span>
+                <span>P</span>
+                <span>P</span>
+                <span>Y</span>
+
+            </div>
+
+            <div class="birthday-title second">
+
+                <span>B</span>
+                <span>I</span>
+                <span>R</span>
+                <span>T</span>
+                <span>H</span>
+                <span>D</span>
+                <span>A</span>
+                <span>Y</span>
+
+            </div>
+
+
+            <!-- SHORT MESSAGE -->
+
+            <div class="final-love-message">
+
+                <strong>
+                    Happy Birthday, Love ❤️
+                </strong>
 
                 <p>
-                    One of my favorite pictures of us. I love how we can be completely silly together and still have the best time. 😂❤️
+                    I made one more little surprise for you.
+                </p>
+
+                <p>
+                    Click the letter below. 💌
                 </p>
 
             </div>
 
 
+            <!-- ==============================
+                 ENVELOPE
+            =============================== -->
 
-            <p class="wish-text">
+            <div class="letter-section">
 
-                I hope you never lose that smile and that funny side of you. Those little moments with you are some of the moments I treasure the most.
+                <p class="letter-label">
+                    A LITTLE LETTER FOR YOU ❤️
+                </p>
 
-            </p>
+                <div
+                    id="letterEnvelope"
+                    class="letter-envelope"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open your birthday letter">
 
+                    <div class="envelope-back"></div>
 
+                    <div class="letter-paper">
 
-            <!-- =========================
-                 PHOTO 2
-            ========================== -->
+                        <div class="letter-content">
 
-            <div class="wish-photo-card">
+                            <h3>
+                                For Erica ❤️
+                            </h3>
 
-                <!-- CHANGE PHOTO 2 -->
+                            <p>
+                                Happy Birthday, love!❤️
+                            </p>
 
-                <img
-                    src="images/lola and erica.jpg"
-                    alt="Our Photo"
-                >
+                            <p>
+                                Wish ko sa'yo matupad mo lahat ng pangarap mo
+                                at goals mo sa buhay. Sana maging masaya ka palagi,
+                                and more birthday to come na kasama ako palagi hehe. ❤️
+                            </p>
 
-                <p>
-                    Someone very special who is part of the person you are today. 🤍
+                            <p>
+                                Nandito lang ako palagi para sa'yo,
+                                sa good days man or sa bad days or even sa mga oras na raragebait kita HAHAHAHAA.
+                                I'll always support you and be here whenever
+                                you need me.
+                            </p>
+
+                            <p>
+                                Kahit anong mangyari, hindi mo kailangang
+                                harapin lahat mag-isa kasi nandito lang ako always handang tumulong sayo,
+                                at sana kapag uutot kana sabihan mo ako kase baho ng utot mo parang matatanggal ilong ko sayo
+                                malaki na nga tong ilong ko papaamoy mo pa utot mo HAHHAHAH eme lang.
+                            </p>
+
+                            <p>
+                                Thank you for being you and for being someone
+                                so special to me. I'm really happy and thankful
+                                na ikaw yung kasama ko sa mga memories
+                                na ginagawa or gagawin pa lang natin.
+                            </p>
+
+                            <p>
+                                Sana marami pa tayong tawanan, kulitan,
+                                away na parang kataposan na ng mundo haha, at syempre marami
+                                pang memories together.❤️
+                            </p>
+
+                            <p class="letter-ending">
+                                I love you so much, love. Mwa mwa. ❤️
+                            </p>
+
+                            <p>
+                                Happy 22nd Birthday! 🎂❤️
+                            </p>
+
+                            <p class="letter-signature">
+                                Love,<br>
+                                Your pinaka poging babalove mo...rudney ❤️
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="envelope-front"></div>
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-heart">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <p id="envelopeHint" class="envelope-hint">
+                    Click the envelope to open 💌
                 </p>
 
             </div>
 
 
+            <!-- BOTTOM -->
 
-            <p class="wish-text">
-
-                I hope you continue to cherish the people you love and the memories you share with them. I know how much they mean to you, and I hope you always have many more beautiful moments together.
-
-            </p>
-
-
-
-            <!-- =========================
-                 PHOTO 3
-            ========================== -->
-
-            <div class="wish-photo-card">
-
-                <!-- CHANGE PHOTO 3 -->
-
-                <img
-                    src="images/fam1.jpg"
-                    alt="Our Photo"
-                >
-
-                <p>
-                    A memory that means a lot to me. 🥰
-                </p>
-
+            <div class="bottom-decorations">
+                ✨ ❤️ ✨ ❤️ ✨
             </div>
 
-
-
-            <p class="wish-text">
-
-                I love seeing you with my family. It makes me happy knowing that you're not only someone special to me, but someone who has also become part of the people I care about.
-
-            </p>
-
-
-
-            <!-- =========================
-                 PHOTO 4
-            ========================== -->
-
-            <div class="wish-photo-card">
-
-                <!-- CHANGE PHOTO 4 -->
-
-                <img
-                    src="images/fam2.jpg"
-                    alt="Our Photo"
-                >
-
-                <p>
-                    The people who mean so much to you. ❤️
-                </p>
-
-            </div>
-
-
-
-            <p class="wish-text">
-
-                I hope I can continue to be there for you and share more moments not only with you, but with the people you love too.
-
-            </p>
-
-            <p class="wish-ending">
-
-                My wish for you is simple:
-                I hope you stay happy, loved,
-                and surrounded by the people
-                who make your life meaningful.
-
-                <br><br>
-
-                And I hope I get to be beside you
-                for many more birthdays, memories,
-                laughs, and adventures. ❤️
-
-                <br><br>
-
-                Happy 22nd Birthday, my love. ❤️
-
-            </p>
-
-
-            <button id="wishContinueButton">
-                One More Thing ❤️
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================
-         FINAL MESSAGE
-    ========================== -->
-
-    <div
-        id="finalPage"
-        class="final-page"
-    >
-
-        <div class="final-content">
-
-
-            <div class="final-heart">
-                ❤️
-            </div>
-
-
-            <p class="final-small">
-                BEFORE YOU GO...
-            </p>
-
-
-            <h2>
-                Happy Birthday,
-                My Love ❤️
-            </h2>
-
-
-            <p class="final-message">
-
-                I hope today reminds you of how loved,
-                appreciated, and special you truly are.
-
-                <br><br>
-
-                Thank you for being you.
-
-                <br><br>
-
-                I love you. ❤️
-
-            </p>
-
-
-            <div class="final-hearts">
-                ❤️ ✨ ❤️ ✨ ❤️
-            </div>
-
-
-            <p class="final-date">
+            <div class="final-date">
                 October 3, 2026
-            </p>
-
+            </div>
 
         </div>
 
     </div>
 
 
-
-    <!-- =========================
-         YOUR SINGING
-    ========================== -->
+    <!-- MUSIC -->
 
     <audio id="birthdaySong">
 
         <source
             src="music/singing.m4a"
-            type="audio/mp4"
-        >
+            type="audio/mp4">
 
     </audio>
-
 
 
     <script src="script.js"></script>

@@ -7,6 +7,15 @@ const birthdaySong =
 const welcomePage =
     document.querySelector(".welcome-page");
 
+const giftPage =
+    document.getElementById("giftPage");
+
+const giftBox =
+    document.getElementById("giftBox");
+
+const giftText =
+    document.getElementById("giftText");
+
 const revealPage =
     document.getElementById("revealPage");
 
@@ -16,99 +25,187 @@ const surprisePage =
 const continueButton =
     document.getElementById("continueButton");
 
-const wishPage =
-    document.getElementById("wishPage");
-
-const wishContinueButton =
-    document.getElementById("wishContinueButton");
-
 const finalPage =
     document.getElementById("finalPage");
 
+const letterEnvelope =
+    document.getElementById("letterEnvelope");
 
-/* =========================
+const envelopeHint =
+    document.getElementById("envelopeHint");
+
+
+/* ==============================
    OPEN SURPRISE
-========================= */
+============================== */
 
-openButton.addEventListener("click", () => {
+openButton.addEventListener(
+    "click",
+    () => {
 
-    openButton.disabled = true;
+        openButton.disabled = true;
 
-    /* HIDE THE FIRST PAGE */
-    welcomePage.classList.add("hide");
+        welcomePage.classList.add("hide");
 
-    /* SHOW SURPRISE */
-    revealPage.classList.add("show");
-
-    birthdaySong.currentTime = 0;
-
-    birthdaySong.play()
-        .then(() => {
-
-            console.log("Your singing is playing!");
-
-        })
-        .catch((error) => {
-
-            console.error(
-                "Music error:",
-                error
-            );
-
-        });
-
-});
+        giftPage.classList.add("show");
 
 
-/* =========================
-   SINGING FINISHED
-========================= */
+        setTimeout(
+            () => {
 
-birthdaySong.addEventListener("ended", () => {
+                giftBox.classList.add("shake");
 
-    revealPage.classList.remove("show");
-
-
-    setTimeout(() => {
-
-        surprisePage.classList.add("show");
-
-    }, 800);
-
-});
+            },
+            700
+        );
 
 
-/* =========================
-   BIRTHDAY → MY WISH
-========================= */
+        setTimeout(
+            () => {
 
-continueButton.addEventListener("click", () => {
+                giftBox.classList.remove("shake");
 
-    surprisePage.classList.remove("show");
+                giftBox.classList.add("open");
 
+                giftText.classList.add("hide");
 
-    setTimeout(() => {
-
-        wishPage.classList.add("show");
-
-    }, 500);
-
-});
+            },
+            1600
+        );
 
 
-/* =========================
-   MY WISH → FINAL
-========================= */
+        setTimeout(
+            () => {
 
-wishContinueButton.addEventListener("click", () => {
+                giftPage.classList.remove("show");
 
-    wishPage.classList.remove("show");
+                revealPage.classList.add("show");
 
 
-    setTimeout(() => {
+                birthdaySong.currentTime = 0;
 
-        finalPage.classList.add("show");
+                birthdaySong
+                    .play()
+                    .then(
+                        () => {
 
-    }, 500);
+                            console.log(
+                                "Singing is playing!"
+                            );
 
-});
+                        }
+                    )
+                    .catch(
+                        (error) => {
+
+                            console.error(
+                                "Music error:",
+                                error
+                            );
+
+                        }
+                    );
+
+            },
+            2500
+        );
+
+    }
+);
+
+
+/* ==============================
+   WHEN SINGING ENDS
+============================== */
+
+birthdaySong.addEventListener(
+    "ended",
+    () => {
+
+        revealPage.classList.remove("show");
+
+
+        setTimeout(
+            () => {
+
+                surprisePage.classList.add("show");
+
+            },
+            800
+        );
+
+    }
+);
+
+
+/* ==============================
+   BIRTHDAY → FINAL PAGE
+============================== */
+
+continueButton.addEventListener(
+    "click",
+    () => {
+
+        surprisePage.classList.remove("show");
+
+
+        setTimeout(
+            () => {
+
+                finalPage.classList.add("show");
+
+            },
+            500
+        );
+
+    }
+);
+
+
+/* ==============================
+   OPEN LOVE LETTER
+============================== */
+
+function openLetter() {
+
+    if (
+        letterEnvelope.classList.contains("open")
+    ) {
+        return;
+    }
+
+    letterEnvelope.classList.add("open");
+
+    envelopeHint.textContent =
+        "A little something from my heart ❤️";
+
+}
+
+
+/* CLICK */
+
+letterEnvelope.addEventListener(
+    "click",
+    openLetter
+);
+
+
+/* KEYBOARD */
+
+letterEnvelope.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Enter" ||
+            event.key === " "
+        ) {
+
+            event.preventDefault();
+
+            openLetter();
+
+        }
+
+    }
+);
